@@ -1,0 +1,17 @@
+<div
+  class="container border border-dark"
+  style="height: 100px; width: 100px"
+  (dragover)="$event.preventDefault();"
+  (dragleave)="$event.preventDefault()"
+  (drop)="$event.preventDefault(); openFile($event)">
+</div>
+
+<div class="container d-flex">
+  <div class="img-container  w-25 p-5" *ngFor="let image of imageList" draggable="true" appDragImage>
+    <img  class="w-100" src="{{image}}" alt="">
+
+  </div>
+  <h1 *ngIf="imageList.length">Evviva Gesù</h1>
+</div>
+
+
